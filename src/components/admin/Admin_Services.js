@@ -8,7 +8,7 @@ import {FaTrashAlt} from 'react-icons/fa';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-
+import withAdminAccess from './withAdminAccess';
 
 function AdminServices() {
 const [service_name_en, setService_name_en] = useState('');
@@ -208,4 +208,4 @@ const handleOpenModal = () => {
 };
 
 
-export default AdminServices;
+export default withAdminAccess(AdminServices);

@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom';
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
 import { FaArrowLeft} from 'react-icons/fa';
-
+import withAdminAccess from './withAdminAccess';
 
 let GalleryItem= () =>
 {
@@ -70,4 +70,4 @@ let GalleryItem= () =>
         </div>
     )
 };
-export default GalleryItem;
+export default withAdminAccess(GalleryItem);

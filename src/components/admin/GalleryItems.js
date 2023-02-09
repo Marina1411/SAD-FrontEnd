@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-
+import withAdminAccess from './withAdminAccess';
 
 function GalleryItems() {
     const [service_name_en, setService_name_en] = useState('');
@@ -275,4 +275,4 @@ function GalleryItems() {
 };
 
 
-export default GalleryItems;
+export default withAdminAccess(GalleryItems);

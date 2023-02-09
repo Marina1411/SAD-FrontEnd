@@ -1,7 +1,7 @@
 import "./Admin.css";
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
-import { withAuthenticationRequired } from "@auth0/auth0-react";
+import withAdminAccess from './withAdminAccess';
 
 function Main() {
     return (
@@ -17,4 +17,4 @@ function Main() {
     )
 };
 
-export default withAuthenticationRequired(Main);
+export default withAdminAccess(Main);

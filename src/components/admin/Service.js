@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom';
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
 import { FaArrowLeft} from 'react-icons/fa';
-
+import withAdminAccess from './withAdminAccess';
 
 let Service= () =>
 {
@@ -103,4 +103,4 @@ let Service= () =>
         </div>
     )
 };
-export default Service;
+export default withAdminAccess(Service);
